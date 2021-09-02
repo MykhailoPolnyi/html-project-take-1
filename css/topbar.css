@@ -1,0 +1,7 @@
+#topbar {
+	border: 1px solid black;
+}
+
+#topbar * {
+	float: left;
+}

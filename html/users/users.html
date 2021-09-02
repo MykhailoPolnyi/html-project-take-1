@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../../css/main_content.css">
 	<link rel="stylesheet" type="text/css" href="../../css/sidebar.css">
+	<link rel="stylesheet" type="text/css" href="../../css/topbar.css">
 	<script type="text/javascript" src="../../js/show-hide-menu.js"></script>
 	<noscript>Your browser does not support JavaScript!</noscript>
 
@@ -20,7 +21,7 @@
 		<a class="w3-bar-item w3-button users active" href="/html/users/users.html"></a>
 		<a class="w3-bar-item w3-button orders" href="../orders/orders.html"></a>
 		<a class="w3-bar-item w3-button storage" href="../storage/storage.html"></a>
-		<a class="w3-bar-item w3-button reports" href="../reports/userReports.html"></a>
+		<a class="w3-bar-item w3-button reports" href="../reports/createReport.html"></a>
 	</div>
 
 
@@ -30,22 +31,29 @@
 			<h3> Welcome, User Name </h3>
 		</div>
 
-		<div id="main-panel" class="w3-container">
-			<h1 class="page-header">Users</h1>	
-			
-			<button class="w3-button"> Add User</button>
+		<h1 id="page-header">Users</h1>
 
-			<div> 
-				<table>
-					<tr>
-						<th> Login </th>
-						<th> Email </th>
-						<th> Mobile </th>
-						<th> Web </th>
-						<th> Action </th>
-					</tr>
-				</table>
+		<div id="main-panel" class="w3-container">
+			
+			<div class="action-panel">
+
+				<button 
+				class="w3-button action-button w3-light-green w3-hover-green" 
+				style="float:right;"> 
+				Add User</button>
+
 			</div>
+	 
+			<table>
+				<tr>
+					<th> Login </th>
+					<th> Email </th>
+					<th> Mobile </th>
+					<th> Web </th>
+					<th> Action </th>
+				</tr>
+			</table>
+			
 
 		</div>
 	</div>

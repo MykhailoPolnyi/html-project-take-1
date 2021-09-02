@@ -1,6 +1,7 @@
 #sidenav {
   background-color: lightskyblue;
   width: 15%;
+  border: 1px solid black;
 }
 
 #sidenav img {

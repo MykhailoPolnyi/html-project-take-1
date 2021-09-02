@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="../../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../../css/main_content.css">
 	<link rel="stylesheet" type="text/css" href="../../css/sidebar.css">
+	<link rel="stylesheet" type="text/css" href="../../css/topbar.css">
 	<script type="text/javascript" src="../../js/show-hide-menu.js"></script>
 	<noscript>Your browser does not support JavaScript!</noscript>
 
@@ -20,7 +21,7 @@
 		<a class="w3-bar-item w3-button users" href="../users/users.html"></a>
 		<a class="w3-bar-item w3-button orders active" href="orders.html"></a>
 		<a class="w3-bar-item w3-button storage" href="../storage/storage.html"></a>
-		<a class="w3-bar-item w3-button reports" href="../reports/userReports.html"></a>
+		<a class="w3-bar-item w3-button reports" href="../reports/createReport.html"></a>
 	</div>
 
 
@@ -28,6 +29,45 @@
 		<div id="topbar" class="w3-container w3-blue">
 			<button id="open-button" type="button" class="w3-button w3-blue w3-xlarge w3-hide-large" onclick='openSidebar()' > &#9776; </button>			
 			<h3> Welcome, User Name </h3>
+		</div>
+
+		<h1 id="page-header">Orders</h1>	
+
+		<div id="main-panel" class="w3-container">
+
+
+			<div class="action-panel">
+
+				<input type="text" name="search-order" placeholder="Enter order details.." style="float: left; ">
+
+				<button class="w3-button action-button w3-white w3-hover-light-gray" style="float: left;"> Search Order</button>
+
+				<button 
+				class="w3-button action-button w3-light-green w3-hover-green" 
+				style="float: right;"> 
+				Add Order</button>
+
+
+				<select name="sort" id="sort" style="float: right; margin-left: 0.25%;">
+					<option value="number">Order number</option>
+					<option value="customer">Customer</option>
+					<option value="realization-time">Realization time</option>
+					<option value="status">Status</option>
+				</select>
+
+				<label for="sort" style="float: right; margin-right: 0.25%;">Sort by:</label>
+
+			</div>
+	 
+			<table>
+				<tr>
+					<th> № </th>
+					<th> Customer </th>
+					<th> Realization time </th>
+					<th> Status </th>
+					<th> Action </th>
+				</tr>
+			</table>
 		</div>
 
 	</div>
