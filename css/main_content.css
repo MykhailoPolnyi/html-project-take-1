@@ -2,6 +2,7 @@
 @import "action_panel.css";
 @import "sidebar.css";
 @import "topbar.css";
+@import "table.css";
 
 main {
   margin-left: 15%;
@@ -13,18 +14,18 @@ header {
   text-align: center;
 }
 
-#main-panel {
+section {
   margin: auto;
   margin-top: 2%;
   text-align: center;
-  width: 80%;
+  width: 90%;
   border: 2px solid black;
   border-radius:10px ;
-  padding: 10px;
+  padding: 1em 1vw;
 }
 
 @media screen and (max-width: 500px) {
-  #main-panel {
+  section {
     width: 100%;
     border:  none;
   }
@@ -39,26 +40,4 @@ header {
   .horizontal-flex {
     width: 100%;
   }
-}
-
-table {
-  width: 100%;
-  overflow-y: auto;
-}
-
-table, th, td {
-  border: 4px solid black;
-  border-collapse: collapse;
-}
-
-th, td {
-  text-align: left;
-}
-
-tr:nth-child(even) {
-  background-color: lightgrey;
-}
-
-th {
-  background-color:lightslategrey ;
 }

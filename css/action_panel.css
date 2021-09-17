@@ -1,6 +1,6 @@
 .action-panel {
   width: 100%;
-  padding: 16px 4px 16px;
+  padding: 0.5em;
   display: flex;
   flex-direction: row;
   align-items: center;
