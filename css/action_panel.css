@@ -1,0 +1,29 @@
+.action-panel {
+  width: 100%;
+  padding: 16px 4px 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+  .action-panel{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.action-panel * {
+  margin: 1% 0;
+}
+
+.action-button {
+  border: 1px solid black;
+  box-shadow: 3px 3px darkgrey;
+}
+
+.action-button:active {
+  box-shadow: 1px 1px black;
+  transform: translateY(2px);
+}

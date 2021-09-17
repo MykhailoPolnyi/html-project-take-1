@@ -4,12 +4,6 @@
   border: 1px solid black;
 }
 
-#sidenav img {
-  margin: auto;
-  max-height:  20%;
-  width: auto;
-}
-
 @media screen and (max-width: 992px) {
   #sidenav {
     width: 30%;
@@ -20,6 +14,12 @@
   #sidenav {
     width: 100%;
   }
+}
+
+#sidenav img {
+  margin: auto;
+  max-height:  20%;
+  width: auto;
 }
 
 #sidenav .active {

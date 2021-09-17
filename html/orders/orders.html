@@ -4,10 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Orders</title>
-	<link rel="stylesheet" type="text/css" href="../../css/w3.css">
 	<link rel="stylesheet" type="text/css" href="../../css/main_content.css">
-	<link rel="stylesheet" type="text/css" href="../../css/sidebar.css">
-	<link rel="stylesheet" type="text/css" href="../../css/topbar.css">
 	<script type="text/javascript" src="../../js/show-hide-menu.js"></script>
 	<noscript>Your browser does not support JavaScript!</noscript>
 
@@ -25,7 +22,7 @@
 
 
 	<main class="w3-main">		
-		<div id="topbar" class="w3-container w3-blue">
+		<div class="w3-container w3-blue topbar">
 			<button id="open-button" type="button" class="w3-button w3-blue w3-xlarge w3-hide-large" onclick='openSidebar()' > &#9776; </button>			
 			<h3> Welcome, User Name </h3>
 		</div>
@@ -37,24 +34,24 @@
 
 			<div class="action-panel">
 
-				<input type="text" name="search-order" placeholder="Enter order details.." style="float: left; ">
-
-				<button class="w3-button action-button w3-white w3-hover-light-gray" style="float: left;"> Search Order</button>
+				<div class="horizontal-flex">
+					<input type="text" name="search-order" style="margin:1%" placeholder="Enter order details..">
+					<button class="w3-button action-button w3-white w3-hover-light-gray"> Search Order</button>
+				</div>
 
 				<button 
-				class="w3-button action-button w3-light-green w3-hover-green" 
-				style="float: right;"> 
-				Add Order</button>
+					class="w3-button action-button w3-light-green w3-hover-green"> Add Order
+				</button>
 
-
-				<select name="sort" id="sort" style="float: right; margin-left: 0.25%;">
-					<option value="number">Order number</option>
-					<option value="customer">Customer</option>
-					<option value="realization-time">Realization time</option>
-					<option value="status">Status</option>
-				</select>
-
-				<label for="sort" style="float: right; margin-right: 0.25%;">Sort by:</label>
+				<div class="horizontal-flex">
+					<label for="sort">Sort by:</label>
+					<select name="sort" id="sort">
+						<option value="number">Order number</option>
+						<option value="customer">Customer</option>
+						<option value="realization-time">Realization time</option>
+						<option value="status">Status</option>
+					</select>
+				</div>
 
 			</div>
 	 

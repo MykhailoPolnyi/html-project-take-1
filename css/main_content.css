@@ -1,3 +1,8 @@
+@import "w3.css";
+@import "action_panel.css";
+@import "sidebar.css";
+@import "topbar.css";
+
 main {
   margin-left: 15%;
 }
@@ -18,22 +23,6 @@ header {
   padding: 10px;
 }
 
-.action-panel {
-  padding: 16px 4px 48px;
-}
-
-.action-panel * {
-  padding: 4px;
-}
-
-.action-panel *[style*="float: left"] {
-  margin: 1% 1% 1% 0%;
-}
-
-.action-panel *[style*="float: right"] {
-  margin: 1% 0% 1% 1%;
-}
-
 @media screen and (max-width: 500px) {
   #main-panel {
     width: 100%;
@@ -41,14 +30,15 @@ header {
   }
 }
 
-.action-button {
-  border: 1px solid black;
-  box-shadow: 3px 3px darkgrey;
+.horizontal-flex {
+  display: flex;
+  flex-direction: row;
 }
 
-.action-button:active {
-  box-shadow: 1px 1px black;
-  transform: translateY(2px);
+@media screen and (max-width: 500px) {
+  .horizontal-flex {
+    width: 100%;
+  }
 }
 
 table {
