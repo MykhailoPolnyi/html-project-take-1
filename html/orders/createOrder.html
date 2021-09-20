@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Orders</title>
+	<link rel="stylesheet" type="text/css" href="../../css/main_content.css">
+	<script type="text/javascript" src="../../js/show-hide-menu.js"></script>
+	<noscript>Your browser does not support JavaScript!</noscript>
+
+</head>
+<body>
+	<div id="sidenav" class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left">
+		<img class="w3-bar-item" src="../../images/test_img.jpg" alt="Logo">
+		<button id="close-button" type="button" class="w3-bar-item w3-button w3-large w3-hide-large" onclick="closeSidebar()">Close &times;</button>
+		<a class="w3-bar-item w3-button main-page" href="../../index.html"></a>
+		<a class="w3-bar-item w3-button users" href="../users/users.html"></a>
+		<a class="w3-bar-item w3-button orders active" href="orders.html"></a>
+		<a class="w3-bar-item w3-button storage" href="../storage/storage.html"></a>
+		<a class="w3-bar-item w3-button reports" href="../reports/createReport.html"></a>
+	</div>
+
+
+	<main class="w3-main">		
+		<div class="w3-container w3-blue topbar">
+			<button id="open-button" type="button" class="w3-button w3-blue w3-xlarge w3-hide-large" onclick='openSidebar()' > &#9776; </button>			
+			<h3> Welcome, User Name </h3>
+		</div>
+
+		<header> <h1>Create New Order</h1> </header>
+		<section class="vertical-flex w3-left-align" style="padding: 3% 10%;">
+			<div>
+				<p>Orderer</p>
+				<input class="full-wide" type="text">
+			</div>
+			<div>
+				<p>Realization Time</p>
+				<input class="full-wide" type="text">
+			</div>
+			<p>Goods</p>
+			<div class="collapsing-horizontal-flex">
+				<div class="vertical-flex">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente, provident. Vitae, at exercitationem. Ratione, nisi mollitia ipsa fugit, architecto atque ea ex, earum provident repudiandae odit iure fugiat necessitatibus maiores.</div>
+				<div class="vertical-flex">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Dignissimos fugit dolorem adipisci aliquid hic cum, officia aperiam autem inventore cumque maiores vel corporis porro excepturi amet in doloremque sint reiciendis.</div>
+			</div>
+			<p>Details</p>
+			<textarea name="orderDetails" id="orderDetails" cols="30" rows="10"></textarea>
+			<button class="w3-button action-button w3-light-green w3-hover-green">Create Order</button>
+		</section>	
+	</main>	
+</body>

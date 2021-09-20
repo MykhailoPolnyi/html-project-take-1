@@ -1,0 +1,73 @@
+@import "w3.css";
+@import "action_panel.css";
+@import "sidebar.css";
+@import "topbar.css";
+@import "table.css";
+
+main {
+  margin-left: 15%;
+}
+
+header {
+  margin: auto;
+  margin-top: 3%;
+  text-align: center;
+}
+
+section {
+  margin: auto;
+  margin-top: 2%;
+  text-align: center;
+  width: 90%;
+  border: 2px solid black;
+  border-radius:10px ;
+  padding: 1em 1vw;
+}
+
+@media screen and (max-width: 500px) {
+  section {
+    width: 100%;
+    border:  none;
+  }
+}
+
+.horizontal-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 500px) {
+  .horizontal-flex {
+    width: 100%;
+  }
+}
+
+.collapsing-horizontal-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 400px){
+  .collapsing-horizontal-flex{
+    flex-direction: column;
+  }
+}
+
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.spreaded {
+  justify-content: space-evenly;
+}
+
+.full-wide {
+  width: 100%;
+}
+
+@media screen and (max-width: 400px){
+  .collapse-mid-align {
+    align-items: center;
+  }
+}
