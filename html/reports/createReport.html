@@ -6,7 +6,6 @@
 	<title>Reports</title>
 	<link rel="stylesheet" type="text/css" href="../../css/main_content.css">
 	<script type="text/javascript" src="../../js/show-hide-menu.js"></script>
-	<noscript>Your browser does not support JavaScript!</noscript>
 
 </head>
 <body>
@@ -29,11 +28,36 @@
 
 		<header> <h1>Generate Report</h1> </header>
 
-		<section class="w3-container">
+		<section>
 
-			<div class="action-panel"></div>
+			<div class="action-panel collapse-mid-align">
+				<div class="vertical-flex w3-left-align">
+					<label for="userSelection">User</label>
+					<select name="selectedUser" id="userSelection">
+						<option value="Piotr">Piotr</option>
+						<option value="Anrew">Andrew</option>
+						<option value="Jack">Jack</option>
+						<option value="Orest">Orest</option>
+					</select>
+				</div>
+				<div class="verctical-flex w3-left-align">
+					<p>Date from:</p>
+					<input type="text">
+				</div>
+				<div class="verctical-flex w3-left-align">
+					<p>Date to:</p>
+					<input type="text">
+				</div>
+				<div class="verctical-flex w3-left-align" style="justify-content: flex-end;">
+					<button class="w3-button w3-light-green w3-hover-green action-button">
+						Generate Report
+					</button>
+				</div>
+			</div>
+		</section>
 
-
+		<section id="userReport" style="visibility: hidden;">
+			
 		</section>
 
 	</main>

@@ -6,7 +6,6 @@
 	<title>Users</title>
 	<link rel="stylesheet" type="text/css" href="../../css/main_content.css">
 	<script type="text/javascript" src="../../js/show-hide-menu.js"></script>
-	<noscript>Your browser does not support JavaScript!</noscript>
 
 </head>
 <body>
@@ -14,7 +13,7 @@
 		<img class="w3-bar-item" src="../../images/test_img.jpg" alt="Logo">
 		<button id="close-button" type="button" class="w3-bar-item w3-button w3-large w3-hide-large" onclick="closeSidebar()">Close &times;</button>
 		<a class="w3-bar-item w3-button main-page" href="../../index.html"></a>
-		<a class="w3-bar-item w3-button users active" href="/html/users/users.html"></a>
+		<a class="w3-bar-item w3-button users active" href="users.html"></a>
 		<a class="w3-bar-item w3-button orders" href="../orders/orders.html"></a>
 		<a class="w3-bar-item w3-button storage" href="../storage/storage.html"></a>
 		<a class="w3-bar-item w3-button reports" href="../reports/createReport.html"></a>
@@ -35,8 +34,7 @@
 
 				<button 
 				class="w3-button action-button w3-light-green w3-hover-green" 
-				style="float:right;"> 
-				Add User</button>
+				style="float:right;" onclick="document.location='createUser.html'">Add User</button>
 
 			</div>
 	 
@@ -51,8 +49,8 @@
 				<tr>
 					<td> Josef </td>
 					<td> exmpl_abc@gmail.com </td>
-					<td> <input type="checkbox"> </td>
-					<td> <input type="checkbox"> </td>
+					<td> Active </td>
+					<td> Active </td>
 					<td> 	
 						<button> <img src="../../images/svg/pencil-fill.svg" alt="Edit"></button>
 						<button> <img src="../../images/svg/trash-fill.svg" alt="Delete"></button> 

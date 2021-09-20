@@ -13,6 +13,10 @@ table, th, td {
 }
 
 th, td {
+  text-align: left;
+}
+
+td:last-child, th:last-child {
   text-align: center;
 }
 
