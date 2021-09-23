@@ -23,15 +23,32 @@
 	<main class="w3-main">		
 		<div class="w3-container w3-blue topbar">
 			<button id="open-button" type="button" class="w3-button w3-blue w3-xlarge w3-hide-large" onclick='openSidebar()' > &#9776; </button>			
-			<h3> Welcome, User Name </h3>
 		</div>
 
 		<header> <h1>Storage</h1> </header>
 
 		<section>
 			<div class="collapsing-horizontal-flex spreaded"> 
-				<div class="vertical-flex">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas molestias, magni. Voluptates amet numquam itaque corrupti eius rerum autem, et esse odit voluptas culpa quasi quas hic maxime, maiores dolorem.</div>
-				<div class="vertical-flex">Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Expedita, omnis! Illo, facere? Autem temporibus beatae cupiditate consectetur minus, quae doloremque obcaecati dolorum rem hic quisquam laborum perspiciatis sapiente deleniti, iusto?</div> 
+				<div class="item-column">
+					<div class="storage-item">
+						<div class="item-header">ORG</div>
+						<div>150</div>
+						<div>
+							<button class="w3-button w3-green action-button">+</button>
+							<button class="w3-button w3-amber action-button">-</button>
+						</div>
+					</div>
+				</div>
+				<div class="item-column">
+					<div class="storage-item">
+						<div class="item-header">80</div>
+						<div>300</div>
+						<div>
+							<button class="w3-button w3-green action-button">+</button>
+							<button class="w3-button w3-amber action-button">-</button>
+						</div>
+					</div>
+				</div> 
 			</div>
 		</section>
 

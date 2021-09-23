@@ -3,6 +3,7 @@
 @import "sidebar.css";
 @import "topbar.css";
 @import "table.css";
+@import "storage.css";
 
 main {
   margin-left: 15%;
