@@ -6,6 +6,7 @@
 	<title>Storage</title>
 	<link rel="stylesheet" type="text/css" href="../../css/main_content.css">
 	<script type="text/javascript" src="../../js/show-hide-menu.js"></script>
+	<script type="text/javascript" src="../../js/storage-control.js"></script>
 
 </head>
 <body>
@@ -31,69 +32,69 @@
 			<div class="collapsing-horizontal-flex spreaded"> 
 				<div class="item-column">
 					<div class="storage-item">
-						<div class="item-header">ORG</div>
+						<div class="item-header">ORG:</div>
 						<div id="orgValue">150</div>
 						<div>
-							<button class="w3-button w3-green w3-hover-green action-button">+</button>
-							<button class="w3-button w3-amber w3-hover-amber action-button">-</button>
+							<button onclick="increment_item('orgValue')" class="w3-button w3-green w3-hover-green action-button">+</button>
+							<button  onclick="decrement_item('orgValue')" class="w3-button w3-amber w3-hover-amber action-button">-</button>
 						</div>
 					</div>
 					<div class="storage-item">
-						<div class="item-header">REG</div>
+						<div class="item-header">REG:</div>
 						<div id="regValue">200</div>
 						<div>
-							<button class="w3-button w3-green w3-hover-green action-button">+</button>
-							<button class="w3-button w3-amber w3-hover-amber action-button">-</button>
+							<button onclick="increment_item('regValue')" class="w3-button w3-green w3-hover-green action-button">+</button>
+							<button onclick="decrement_item('regValue')" class="w3-button w3-amber w3-hover-amber action-button">-</button>
 						</div>
 					</div>
 					<div class="storage-item">
-						<div class="item-header">TP</div>
-						<div id="tpValu">200</div>
+						<div class="item-header">TP:</div>
+						<div id="tpValue">200</div>
 						<div>
-							<button class="w3-button w3-green w3-hover-green action-button">+</button>
-							<button class="w3-button w3-amber w3-hover-amber action-button">-</button>
+							<button onclick="increment_item('tpValue')" class="w3-button w3-green w3-hover-green action-button">+</button>
+							<button onclick="decrement_item('tpValue')" class="w3-button w3-amber w3-hover-amber action-button">-</button>
 						</div>
 					</div>
 					<div class="storage-item">
-						<div class="item-header">MIX</div>
+						<div class="item-header">MIX:</div>
 						<div id="mixValue">200</div>
 						<div>
-							<button class="w3-button w3-green w3-hover-green action-button">+</button>
-							<button class="w3-button w3-amber w3-hover-amber action-button">-</button>
+							<button onclick="increment_item('mixValue')" class="w3-button w3-green w3-hover-green action-button">+</button>
+							<button onclick="decrement_item('mixValue')" class="w3-button w3-amber w3-hover-amber action-button">-</button>
 						</div>
 					</div>
 				</div>
 				<div class="item-column">
 					<div class="storage-item">
-						<div class="item-header">80</div>
+						<div class="item-header">80:</div>
 						<div id="value80">300</div>
 						<div>
-							<button class="w3-button w3-green w3-hover-green action-button">+</button>
-							<button class="w3-button w3-amber w3-hover-amber action-button">-</button>
+							<button onclick="increment_item('value80')" class="w3-button w3-green w3-hover-green action-button">+</button>
+							<button onclick="decrement_item('value80')" class="w3-button w3-amber w3-hover-amber action-button">-</button>
 						</div>
 					</div>
 					<div class="storage-item">
-						<div class="item-header">100</div>
+						<div class="item-header">100:</div>
 						<div id="value100" >300</div>
 						<div>
-							<button class="w3-button w3-green w3-hover-green action-button">+</button>
-							<button class="w3-button w3-amber w3-hover-amber action-button">-</button>
+							<button onclick="increment_item('value100')" class="w3-button w3-green w3-hover-green action-button">+</button>
+							<button onclick="decrement_item('value100')" class="w3-button w3-amber w3-hover-amber action-button">-</button>
 						</div>
 					</div>
 					<div class="storage-item">
-						<div class="item-header">150</div>
+						<div class="item-header">150:</div>
 						<div id="value150">300</div>
 						<div>
-							<button class="w3-button w3-green w3-hover-green action-button">+</button>
-							<button class="w3-button w3-amber w3-hover-amber action-button">-</button>
+							<button onclick="increment_item('value150')" class="w3-button w3-green w3-hover-green action-button">+</button>
+							<button onclick="decrement_item('value150')" class="w3-button w3-amber w3-hover-amber action-button">-</button>
 						</div>
 					</div>
 					<div class="storage-item">
-						<div class="item-header">200</div>
+						<div class="item-header">200:</div>
 						<div id="value200">300</div>
 						<div>
-							<button class="w3-button w3-green w3-hover-green action-button">+</button>
-							<button class="w3-button w3-amber w3-hover-amber action-button">-</button>
+							<button onclick="increment_item('value200')" class="w3-button w3-green w3-hover-green action-button">+</button>
+							<button onclick="decrement_item('value200')" class="w3-button w3-amber w3-hover-amber action-button">-</button>
 						</div>
 					</div>
 				</div> 
