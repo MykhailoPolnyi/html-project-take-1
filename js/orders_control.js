@@ -91,18 +91,3 @@ search_button.addEventListener("change", (event) => {
 });
 
 add_orders(orders);
-
-/*
-function clear_inputs() {
-	document.getElementById("order-customer").innerHTML = "";
-	document.getElementById("realization-time").innerHTML = "";
-}
-
-function create_order() {
-	customer = document.getElementById("order-customer").value;
-	time = document.getElementById("realization-time").value;
-	new_order = new Order(customer, time, false);
-	orders.push(new_order);
-	clear_inputs();
-}
-*/
