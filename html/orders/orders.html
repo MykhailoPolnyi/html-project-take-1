@@ -5,9 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Orders</title>
 	<link rel="stylesheet" type="text/css" href="../../css/main_content.css">
-	<script type="text/javascript" src="../../js/show-hide-menu.js"></script>
-	<noscript>Your browser does not support JavaScript!</noscript>
-
 </head>
 <body>
 	<div id="sidenav" class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left">
@@ -34,8 +31,8 @@
 			<div class="action-panel">
 
 				<div class="horizontal-flex">
-					<input type="text" name="search-order" style="margin:1%" placeholder="Enter order details..">
-					<button class="w3-button action-button w3-white w3-hover-light-gray"> Search Order</button>
+					<input type="text" id="search-order" style="margin:1%" placeholder="Enter order details..">
+					<button id="search-button" class="w3-button action-button w3-white w3-hover-light-gray"> Search Order</button>
 				</div>
 
 				<button 
@@ -43,15 +40,19 @@
 				</button>
 
 				<div class="horizontal-flex">
-					<label for="sort">Sort by:</label>
-					<select name="sort" id="sort">
-						<option value="number">Order number</option>
+					<label style="align-self: center;" for="sort">Sort by:</label>
+					<select class="w3-button" style="border: 1px solid black;" id="sort" onchange="sort_table()">
+						<option value="id">Order number</option>
 						<option value="customer">Customer</option>
-						<option value="realization-time">Realization time</option>
-						<option value="status">Status</option>
+						<option value="realization_date">Realization time</option>
+						<option value="is_completed">Status</option>
 					</select>
 				</div>
 
+			</div>
+
+			<div>
+				In progress: <span id="tasks-in-progress">0</span>	
 			</div>
 
 			<table>
@@ -63,22 +64,16 @@
 					<th> Action </th>
 				</tr>
 				<tbody id="orders">
-					<tr>
-						<td>1</td>
-						<td> Furn Inc.</td>
-						<td> 5d 4h 62m</td>
-						<td> In progress </td>
-						<td> 
-							<button> <img src="../../images/svg/info-circle.svg" alt="Edit"></button>
-							<button> <img src="../../images/svg/pencil-fill.svg" alt="Edit"></button>
-							<button> <img src="../../images/svg/trash-fill.svg" alt="Delete"></button> 
-						</td>
-					</tr>
+
 				</tbody>
 			</table>
 
 		</section>
 
 	</main>
+
+	<script type="text/javascript" src="../../js/show-hide-menu.js"></script>
+	<script type="text/javascript" src="../../js/orders_control.js"></script>
+
 </body>
 </html>           
