@@ -5,8 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Users</title>
 	<link rel="stylesheet" type="text/css" href="../../css/main_content.css">
-	<script type="text/javascript" src="../../js/show-hide-menu.js"></script>
-
 </head>
 <body>
 	<div id="sidenav" class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left">
@@ -30,22 +28,20 @@
 		<section>
 			
 			<div class="action-panel">
-
 				<button 
 				class="w3-button action-button w3-light-green w3-hover-green" 
 				style="float:right;" onclick="document.location='createUser.html'">Add User</button>
-
 			</div>
 	 
 			<table>
-				<tr>
-					<th> Login </th>
-					<th> Email </th>
-					<th> Mob </th>
-					<th> Web </th>
-					<th> Action </th>
-				</tr>
 				<tbody id="users">
+					<tr>
+						<th> Login </th>
+						<th> Email </th>
+						<th> Mob </th>
+						<th> Web </th>
+						<th> Action </th>
+					</tr>
 					<tr>
 						<td> Josef </td>
 						<td> exmpl_abc@gmail.com </td>
@@ -62,5 +58,8 @@
 
 		</section>
 	</main>
+	
+	<script type="text/javascript" src="../../js/show-hide_menu.js"></script>
+
 </body>
 </html>

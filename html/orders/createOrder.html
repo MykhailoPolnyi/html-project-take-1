@@ -5,9 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Orders</title>
 	<link rel="stylesheet" type="text/css" href="../../css/main_content.css">
-	<script type="text/javascript" src="../../js/show-hide-menu.js"></script>
-	<noscript>Your browser does not support JavaScript!</noscript>
-
 </head>
 <body>
 	<div id="sidenav" class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left">
@@ -30,13 +27,13 @@
 		<section class="vertical-flex w3-left-align" style="padding: 3% 10%;">
 			<div>
 				<p>Orderer</p>
-				<input class="full-wide" type="text">
+				<input class="full-wide" type="text" id="order-customer">
 			</div>
 			<div>
 				<p>Realization Time</p>
-				<input class="full-wide" type="text">
+				<input class="full-wide" type="text" id="realization-time">
 			</div>
-			<p>Materials</p>
+ 			<p>Materials</p>
 			<div class="collapsing-horizontal-flex">
 				<div class="item-column"> 
 					<div class="storage-item">
@@ -79,5 +76,8 @@
 			<textarea name="orderDetails" id="orderDetails" cols="30" rows="3"></textarea>
 			<button class="w3-button action-button w3-light-green w3-hover-green">Create Order</button>
 		</section>	
-	</main>	
+	</main>
+
+	<script type="text/javascript" src="../../js/show-hide_menu.js"></script>
+
 </body>
