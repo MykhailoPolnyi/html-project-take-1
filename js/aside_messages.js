@@ -24,3 +24,15 @@ export const delete_succeed_message = async (id) =>
 
 export const delete_failed_message = async (err) =>
     create_message(`Order deleting failed. <br> ${err}`, "failed-message");
+
+export const edit_succeed_message = async (id) =>
+    create_message(`Order №${id} edited successfully!`, "succeed-message");
+
+export const edit_failed_message = async (id, err) =>
+    create_message(`Order №${id} edit failed! <br> ${err}`, "failed-message");
+
+export const order_not_found_message = async (id) =>
+    create_message(
+        `Order №${id} not found! <br> <b> <a href="./orders.html">Go to all orders.</a> </b>`,
+        "failed-message"
+    );

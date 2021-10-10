@@ -23,11 +23,11 @@
 			<button id="open-button" type="button" class="w3-button w3-blue w3-xlarge w3-hide-large" onclick='openSidebar()' > &#9776; </button>
 		</div>
 
-		<header> <h1>Create New Order</h1> </header>
+		<header> <h1 id="header">Edit Order №</h1> </header>
 		<section class="vertical-flex w3-left-align" style="padding: 3% 10%;">
 			<div>
-				<label for="status">Status</label>
-				<select id="status" class="full-wide w3-button" style="border: 1px solid #000000; text-align: left" >
+				<label for="order-status">Status</label>
+				<select id="order-status" class="full-wide w3-button" style="border: 1px solid #000000; text-align: left" >
 					<option value="0">In progress</option>
 					<option value="1">Done</option>
 				</select>
@@ -81,11 +81,11 @@
 			</div>
 			<label for="orderDetails">Details</label>
 			<textarea name="orderDetails" id="orderDetails" cols="30" rows="3"></textarea>
-			<button id="create-order" class="w3-button action-button w3-light-green w3-hover-green">Create Order</button>
+			<button id="edit-order" class="w3-button action-button w3-light-green w3-hover-green">Edit Order</button>
 		</section>
 	</main>
 
 	<script type="text/javascript" src="../../js/show-hide_menu.js"></script>
-	<script type="module" src="../../js/order_create.js"></script>
+	<script type="module" src="../../js/order_edit.js"></script>
 
 </body>

@@ -39,6 +39,48 @@ const order_template = (order) => ` \
 		<td id="order-${order.id}-actions"></td> \
 	</tr>`;
 
+const set_action_buttons = (id, action_panel) => {
+    set_info_button(id, action_panel);
+    set_edit_button(id,action_panel);
+    set_delete_button(id, action_panel);
+}
+
+const set_info_button = (id, action_panel) => {
+    const info_button = document.createElement("button");
+    const anchor = document.createElement("a");
+    anchor.href = `./orderDetails.html?id=${id}`;
+    const img = document.createElement("img");
+    img.src = "../../images/svg/info-circle.svg";
+    img.alt = "Info";
+    anchor.appendChild(img);
+    info_button.appendChild(anchor);
+    action_panel.appendChild(info_button);
+}
+
+const set_edit_button = (id, action_panel) => {
+    const edit_button = document.createElement("button");
+    const anchor = document.createElement("a");
+    anchor.href = `./editOrder.html?id=${id}`;
+    const img = document.createElement("img");
+    img.src = "../../images/svg/pencil-fill.svg";
+    img.alt = "Edit";
+    anchor.appendChild(img);
+    edit_button.appendChild(anchor);
+    action_panel.appendChild(edit_button);
+}
+
+const set_delete_button = (id, action_panel) => {
+    const delete_button = document.createElement("button");
+    const img = document.createElement("img");
+    img.src = "../../images/svg/trash-fill.svg";
+    img.alt = "Delete";
+    delete_button.appendChild(img);
+    delete_button.addEventListener("click", (event) => {
+        event.preventDefault();
+        delete_order_by_id(id);
+    })
+    action_panel.appendChild(delete_button);
+}
 
 const add_order = (order) => {
     orders_container.insertAdjacentHTML(
@@ -49,7 +91,7 @@ const add_order = (order) => {
     set_action_buttons(order.id, action_panel);
 }
 
-export const delete_order_by = async (id) => {
+export const delete_order_by_id = async (id) => {
     const response = await delete_order(id);
     if (response.ok) {
         delete_succeed_message(id);
@@ -65,19 +107,6 @@ export const delete_order_by = async (id) => {
             delete_failed_message("Server error occurred.");
         }
     }
-}
-
-const set_action_buttons = (id, action_panel) => {
-    const delete_button = document.createElement("button");
-    delete_button.insertAdjacentHTML(
-        "beforeend",
-        "<img src='../../images/svg/trash-fill.svg' alt='Delete'/>"
-    );
-    delete_button.addEventListener("click", (event) => {
-        event.preventDefault();
-        delete_order_by(id);
-    })
-    action_panel.appendChild(delete_button);
 }
 
 

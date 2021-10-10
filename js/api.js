@@ -23,13 +23,22 @@ const base_request = async ({ urlPath: url_path = "", method = "GET", body = nul
 
 
 export const get_orders = async () => {
-  const rawResponse = await base_request({ method: "GET" });
+  const raw_response = await base_request({ method: "GET" });
 
-  return await rawResponse.json();
+  return await raw_response.json();
 };
 
-export const post_order = async (body) => base_request({ method: "POST", body });
+export const get_order = async (id) => {
+  const raw_response = await base_request({urlPath: `/${id}`, method: "GET"})
 
-export const update_order = async (id, body) => base_request({ urlPath: `/${id}`, method: "PUT", body });
+  return await raw_response.json();
+}
 
-export const delete_order = async (id) => base_request({ urlPath: `/${id}`, method: "DELETE" });
+export const post_order = async (body) =>
+    base_request({ method: "POST", body });
+
+export const update_order = async (id, body) =>
+    base_request({ urlPath: `/${id}`, method: "PUT", body });
+
+export const delete_order = async (id) =>
+    base_request({ urlPath: `/${id}`, method: "DELETE" });

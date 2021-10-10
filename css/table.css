@@ -33,6 +33,7 @@ th {
 }
 
 td > button {
+  margin: 0 0.5em;
   border: none;
   background-color: inherit;
   cursor: pointer;

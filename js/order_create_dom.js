@@ -3,7 +3,7 @@ export const confirm_button = document.getElementById("create-order");
 const customer_field = document.getElementById("order-customer");
 const date_field = document.getElementById("realization-time");
 
-const date_to_sql_format = (date) => `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
+export const date_to_sql_format = (date) => `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
 
 export const create_order_body = () => {
     const received_customer = customer_field.value;
