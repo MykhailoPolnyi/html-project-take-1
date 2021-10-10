@@ -5,12 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Create User</title>
 	<link rel="stylesheet" type="text/css" href="../../css/main_content.css">
-	<script type="text/javascript" src="../../js/show-hide-menu.js"></script>
-
 </head>
 <body>
 	<div id="sidenav" class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left">
-		<img class="w3-bar-item" src="../../images/test_img.jpg" alt="Logo">
+		<img class="w3-bar-item" src="../../images/logo.jpg" alt="Logo">
 		<button id="close-button" type="button" class="w3-bar-item w3-button w3-large w3-hide-large" onclick="closeSidebar()">Close &times;</button>
 		<a class="w3-bar-item w3-button main-page" href="../../index.html"></a>
 		<a class="w3-bar-item w3-button users active" href="users.html"></a>
@@ -22,35 +20,38 @@
 	<main class="w3-main">		
 		<div class="w3-container w3-blue topbar">
 			<button id="open-button" type="button" class="w3-button w3-blue w3-xlarge w3-hide-large" onclick='openSidebar()' > &#9776; </button>			
-			<h3> Welcome, User Name </h3>
 		</div>
 
 		<header><h1>Create New User</h1></header>
 
 		<section class="vertical-flex" style="align-items: center;">
-			<div class="vertical-flex" style="width: 70%;">
+			<form class="vertical-flex" style="width: 70%;" action="javascript:void(0);" method="POST" onsubmit="add_user()">
 				<p>Login</p>
-				<input type="text">
+				<input type="text" id="login" placeholder="Enter user login...">
 				<p>Email</p>
-				<input type="text">
+				<input type="email" id="email" placeholder="Enter user email...">
 
-				<div class="collapsing-horizontal-flex" style="margin: 3% 0; align-self: center;">
+				<div class="horizontal-flex" 
+				style="margin: 3% 0; width: 70%; justify-content: space-between; align-self: center;"
+				>
 					<div>
-						<input type="checkbox" id="isAdmin">
-						<label for="isAdmin">Admin</label>
+						<input type="checkbox" id="is-admin" name="is-admin">
+						<label for="is-admin">Admin</label>
 					</div>
 					<div>
-						<input type="checkbox" id="mobileUser">
-						<label for="mobileUser">Mobile</label>
+						<input type="checkbox" id="mobile-user" name="mobile-user">
+						<label for="mobile-user">Mobile</label>
 					</div>
 					<div>
-						<input type="checkbox" id="webUser">
-						<label for="webUser">Web</label>
+						<input type="checkbox" id="web-user" name="web-user">
+						<label for="web-user">Web</label>
 					</div>
 				</div>
-				<button class="w3-button action-button w3-light-green w3-hover-green">Create User</button>
-			</div>
+				<input type="submit" class="w3-button action-button w3-light-green w3-hover-green" value="CreateUser">
+			</form>
 		</section>
 	</main>
+
+	<script type="text/javascript" src="../../js/show-hide_menu.js"></script>
 
 </body>

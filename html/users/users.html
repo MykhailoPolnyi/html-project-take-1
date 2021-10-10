@@ -5,12 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Users</title>
 	<link rel="stylesheet" type="text/css" href="../../css/main_content.css">
-	<script type="text/javascript" src="../../js/show-hide-menu.js"></script>
-
 </head>
 <body>
 	<div id="sidenav" class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left">
-		<img class="w3-bar-item" src="../../images/test_img.jpg" alt="Logo">
+		<img class="w3-bar-item" src="../../images/logo.jpg" alt="Logo">
 		<button id="close-button" type="button" class="w3-bar-item w3-button w3-large w3-hide-large" onclick="closeSidebar()">Close &times;</button>
 		<a class="w3-bar-item w3-button main-page" href="../../index.html"></a>
 		<a class="w3-bar-item w3-button users active" href="users.html"></a>
@@ -23,7 +21,6 @@
 	<main class="w3-main">		
 		<div class="w3-container w3-blue topbar">
 			<button id="open-button" type="button" class="w3-button w3-blue w3-xlarge w3-hide-large" onclick='openSidebar()' > &#9776; </button>			
-			<h3> Welcome, User Name </h3>
 		</div>
 
 		<header> <h1>Users</h1> </header>
@@ -31,35 +28,38 @@
 		<section>
 			
 			<div class="action-panel">
-
 				<button 
 				class="w3-button action-button w3-light-green w3-hover-green" 
 				style="float:right;" onclick="document.location='createUser.html'">Add User</button>
-
 			</div>
 	 
 			<table>
-				<tr>
-					<th> Login </th>
-					<th> Email </th>
-					<th> Mob </th>
-					<th> Web </th>
-					<th> Action </th>
-				</tr>
-				<tr>
-					<td> Josef </td>
-					<td> exmpl_abc@gmail.com </td>
-					<td> Active </td>
-					<td> Active </td>
-					<td> 	
-						<button> <img src="../../images/svg/pencil-fill.svg" alt="Edit"></button>
-						<button> <img src="../../images/svg/trash-fill.svg" alt="Delete"></button> 
-					</td>
-				</tr>
+				<tbody id="users">
+					<tr>
+						<th> Login </th>
+						<th> Email </th>
+						<th> Mob </th>
+						<th> Web </th>
+						<th> Action </th>
+					</tr>
+					<tr>
+						<td> Josef </td>
+						<td> exmpl_abc@gmail.com </td>
+						<td> + </td>
+						<td> + </td>
+						<td> 	
+							<button> <img src="../../images/svg/pencil-fill.svg" alt="Edit"></button>
+							<button> <img src="../../images/svg/trash-fill.svg" alt="Delete"></button> 
+						</td>
+					</tr>
+				</tbody>
 			</table>
 			
 
 		</section>
 	</main>
+	
+	<script type="text/javascript" src="../../js/show-hide_menu.js"></script>
+
 </body>
 </html>

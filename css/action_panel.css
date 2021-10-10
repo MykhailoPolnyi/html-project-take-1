@@ -10,7 +10,7 @@
 @media screen and (max-width: 500px) {
   .action-panel{
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 }
 

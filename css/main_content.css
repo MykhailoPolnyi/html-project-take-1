@@ -3,20 +3,20 @@
 @import "sidebar.css";
 @import "topbar.css";
 @import "table.css";
+@import "storage.css";
+@import "aside_messages.css";
 
 main {
   margin-left: 15%;
 }
 
 header {
-  margin: auto;
-  margin-top: 3%;
+  margin: 3% auto;
   text-align: center;
 }
 
 section {
-  margin: auto;
-  margin-top: 2%;
+  margin: 2% auto;
   text-align: center;
   width: 90%;
   border: 2px solid black;
@@ -36,10 +36,9 @@ section {
   flex-direction: row;
 }
 
-@media screen and (max-width: 500px) {
-  .horizontal-flex {
-    width: 100%;
-  }
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
 }
 
 .collapsing-horizontal-flex {
@@ -47,27 +46,12 @@ section {
   flex-direction: row;
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 640px){
   .collapsing-horizontal-flex{
     flex-direction: column;
   }
 }
 
-.vertical-flex {
-  display: flex;
-  flex-direction: column;
-}
-
-.spreaded {
-  justify-content: space-evenly;
-}
-
 .full-wide {
   width: 100%;
-}
-
-@media screen and (max-width: 400px){
-  .collapse-mid-align {
-    align-items: center;
-  }
 }
