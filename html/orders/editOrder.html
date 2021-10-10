@@ -18,14 +18,74 @@
 	</div>
 
 
-	<main class="w3-main">		
+	<main class="w3-main">
 		<div class="w3-container w3-blue topbar">
-			<button id="open-button" type="button" class="w3-button w3-blue w3-xlarge w3-hide-large" onclick='openSidebar()' > &#9776; </button>			
+			<button id="open-button" type="button" class="w3-button w3-blue w3-xlarge w3-hide-large" onclick='openSidebar()' > &#9776; </button>
 		</div>
 
-		<header> <h1>Orders</h1> </header>	
+		<header> <h1>Create New Order</h1> </header>
+		<section class="vertical-flex w3-left-align" style="padding: 3% 10%;">
+			<div>
+				<label for="status">Status</label>
+				<select id="status" class="full-wide w3-button" style="border: 1px solid #000000; text-align: left" >
+					<option value="0">In progress</option>
+					<option value="1">Done</option>
+				</select>
+			</div>
+			<div>
+				<label for="order-customer">Customer</label>
+				<input class="full-wide" type="text" id="order-customer">
+			</div>
+			<div>
+				<label for="realization-time">Realization Time (YYYY-MM-DD)</label>
+				<input class="full-wide" type="text" id="realization-time">
+			</div>
+			<p>Materials</p>
+			<div class="collapsing-horizontal-flex">
+				<div class="item-column">
+					<div class="storage-item">
+						<label for="value-org" class="item-header">ORG:</label>
+						<input id="value-org" name="valueOrg" type="text">
+					</div>
+					<div class="storage-item">
+						<label for="value-reg" class="item-header">REG:</label>
+						<input id="value-reg" name="valueReg" type="text">
+					</div>
+					<div class="storage-item">
+						<label for="value-tp" class="item-header">TP:</label>
+						<input id="value-tp" name="valueTp" type="text">
+					</div>
+					<div class="storage-item">
+						<label for="value-mix" class="item-header">MIX:</label>
+						<input id="value-mix" name="valueMix" type="text">
+					</div>
+				</div>
+				<div class="item-column">
+					<div class="storage-item">
+						<label for="value-80" class="item-header">80:</label>
+						<input id="value-80" name="value80" type="text">
+					</div>
+					<div class="storage-item">
+						<label for="value-100" class="item-header">100:</label>
+						<input id="value-100" name="value100" type="text">
+					</div>
+					<div class="storage-item">
+						<label for="value-150" class="item-header">150:</label>
+						<input id="value-150" name="value150" type="text">
+					</div>
+					<div class="storage-item">
+						<label for="value-200" class="item-header">200:</label>
+						<input id="value-200" name="value200" type="text">
+					</div>
+				</div>
+			</div>
+			<label for="orderDetails">Details</label>
+			<textarea name="orderDetails" id="orderDetails" cols="30" rows="3"></textarea>
+			<button id="create-order" class="w3-button action-button w3-light-green w3-hover-green">Create Order</button>
+		</section>
 	</main>
 
 	<script type="text/javascript" src="../../js/show-hide_menu.js"></script>
+	<script type="module" src="../../js/order_create.js"></script>
 
-</body>	           
+</body>

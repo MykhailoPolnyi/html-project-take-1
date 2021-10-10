@@ -1,17 +1,15 @@
 import {
 	Order,
 	refresh_orders,
-	search_button, search_field,
-	show_search_input,
-	sort_select,
-	sort_table_by,
+	search_button, search_field, show_search_input,
+	sort_select, sort_table_by
 } from "./orders_dom_util.js";
 
 import {
-	getOrders
+	get_orders
 } from "./api.js";
 
-const request_results = await getOrders();
+const request_results = await get_orders();
 
 const orders = request_results.map((order => new Order(
 		order.id,

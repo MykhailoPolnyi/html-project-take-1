@@ -1,0 +1,47 @@
+aside {
+    position: fixed;
+    top: 4em;
+    width: 30%;
+    left: 42%;
+    text-align: center;
+    padding: 1em 0;
+    background-color: #ffeb3b;
+    border: 1px solid #896601;
+    border-radius: 5px;
+    animation: pop-up-message 6s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 992px){
+    aside {
+        width: 30%;
+        left: 35%;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    aside {
+        width: 80%;
+        left: 10%;
+        top: 5vh;
+    }
+}
+
+
+.succeed-message {
+    background-color: #8bc34a;
+    color: #005819;
+    border-color: currentColor;
+}
+.failed-message {
+    background-color: #ff7474;
+    color: darkred;
+    border-color: currentColor;
+}
+
+@keyframes pop-up-message {
+    0% {top: -6em}
+    25% {top: 4em}
+    100% {top: 4em}
+}

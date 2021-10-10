@@ -1,9 +1,9 @@
 const BASE_URL = "http://localhost:3000";
 const RESOURCE_URL = `${BASE_URL}/orders`;
 
-const baseRequest = async ({ urlPath = "", method = "GET", body = null }) => {
+const base_request = async ({ urlPath: url_path = "", method = "GET", body = null }) => {
   try {
-    const reqParams = {
+    const req_params = {
       headers: {
         "Content-Type": "application/json",
       },
@@ -12,24 +12,24 @@ const baseRequest = async ({ urlPath = "", method = "GET", body = null }) => {
     };
 
     if (body) {
-      reqParams.body = JSON.stringify(body);
+      req_params.body = JSON.stringify(body);
     }
 
-    return await fetch(`${RESOURCE_URL}${urlPath}`, reqParams);
+    return await fetch(`${RESOURCE_URL}${url_path}`, req_params);
   } catch (error) {
     console.error("HTTP ERROR: ", error);
   }
 };
 
 
-export const getOrders = async () => {
-  const rawResponse = await baseRequest({ method: "GET" });
+export const get_orders = async () => {
+  const rawResponse = await base_request({ method: "GET" });
 
   return await rawResponse.json();
 };
 
-export const postOrder = (body) => baseRequest({ method: "POST", body });
+export const post_order = async (body) => base_request({ method: "POST", body });
 
-export const updateOrder = (id, body) => baseRequest({ urlPath: `/${id}`, method: "PUT", body });
+export const update_order = async (id, body) => base_request({ urlPath: `/${id}`, method: "PUT", body });
 
-export const deleteOrder = (id) => baseRequest({ urlPath: `/${id}`, method: "DELETE" });
+export const delete_order = async (id) => base_request({ urlPath: `/${id}`, method: "DELETE" });
